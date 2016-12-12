@@ -6,15 +6,13 @@ $(document).ready(function() {
 });
 
 function getCoordinates() {
-  var loc = $("#location").val();
-  var stop = loc.indexOf(",") + 1;
-  var city = loc.substring(0,stop);
-  var state = loc.substring(stop+1, loc.length);
+  var city = $("#location").val();
+  var state = $(".state_selected").text();
   $.get("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address="+city+"+"+state, function(data) {
     var lat = data.results[0].geometry.location.lat;
     var lng = data.results[0].geometry.location.lng;
     $(".solar_data_1").html("");
-    $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>place</i>"+loc+"</div><div class='collapsible-body'><ul><li class='lat'>Latitude: "+lat+"</li><li class='long'>Longitude: "+lng+"</li></ul></div></li>");
+    $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>place</i>"+city+"</div><div class='collapsible-body'><ul><li class='lat'>Latitude: "+lat+"</li><li class='long'>Longitude: "+lng+"</li></ul></div></li>");
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"solar resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
     getSolarData();
     getSolarProd(lat, lng);
