@@ -7,13 +7,16 @@ $(document).ready(function() {
 });
 
 function getCoordinates() {
-  $("form").on("submit", function(address) {
+  $("form").on("submit", function() {
     event.preventDefault();
-    $.get("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address=Denver,+CO", function(data) {
+    var loc = $("#location").val();
+    var stop = loc.indexOf(",") + 1;
+    var city = loc.substring(0,stop);
+    var state = loc.substring(stop+1, loc.length);
+    $.get("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address="+city+"+"+state, function(data) {
       var lat = data.results[0].geometry.location.lat;
       var lng = data.results[0].geometry.location.lng;
-      console.log("lat is " + lat);
-      console.log("long is " + lng);
+      
     });
   });
 }
