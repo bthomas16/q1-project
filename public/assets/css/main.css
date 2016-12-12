@@ -13,3 +13,12 @@ nav .brand-logo {
 .collapsible-body {
   background-color: gray;
 }
+
+.production {
+  border-top: solid white 1px;
+  padding-top: 1em;
+}
+
+.solar-prod-data {
+  display: none;
+}

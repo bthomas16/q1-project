@@ -17,6 +17,7 @@ function getCoordinates() {
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>place</i>"+loc+"</div><div class='collapsible-body'><ul><li class='lat'>Latitude: "+lat+"</li><li class='long'>Longitude: "+lng+"</li></ul></div></li>");
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"solar resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
     getSolarData();
+    getSolarProd(lat, lng);
   });
 }
 
@@ -37,4 +38,18 @@ function getSolarData() {
     var lat_tilt = outputs.avg_lat_tilt.annual;
     $(".solar_data_2").append("<li class='lat_tilt collection-item'>Annual avg lat-tilt: "+lat_tilt+"</li>");
   });
+}
+
+function getSolarProd(lat, long) {
+  //var list_collection = $(".ac_monthly_prod").children();
+  //var arr = [].slice.call(list_collection);
+  //console.log(arr);
+  var arr = $(".ac_prod");
+  $.get("https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=5&module_type=1&losses=10&array_type=1&tilt=40&azimuth=180", function(data) {
+    for (var i = 0; i < arr.length; i++) {
+      var ac_data = data.outputs.ac_monthly[i];
+      arr[i].innerHTML = ac_data;
+    }
+  });
+  $(".solar-prod-data").attr("style", "display: block");
 }
