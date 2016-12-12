@@ -2,6 +2,7 @@ nav .brand-logo {
   padding-left: 0.5em;
 }
 
+
 .input_solar {
   padding-top: 1em;
 }
@@ -21,4 +22,55 @@ nav .brand-logo {
 
 .solar-prod-data {
   display: none;
+}
+
+/*MAP*/
+.input_map {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+}
+.wrapper:nth-child(even) {
+  margin-left: 20.5px;
+}
+
+.hexagon {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 11.5px;
+  color: white;
+  background-color: currentColor;
+  margin: 5.75px 0.5px;
+}
+.hexagon:before, .hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 5.75px solid currentColor;
+}
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 5.75px solid currentColor;
+}
+
+.state {
+  color:gray;
+}
+
+.state:hover {
+  /*transform: scale(2);*/
+  color: red;
 }
