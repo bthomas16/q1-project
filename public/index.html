@@ -25,8 +25,11 @@
 
       <!-- MAP -->
       <div class="row input_map">
+        <div class="select_state">
+          <h2 class="state_selected">Select A State</h2>
+        </div>
         <div class='wrapper'>
-          <div class='hexagon h-1-1 state'></div>
+          <div class='hexagon h-1-1 state' id="ALASKA"></div>
           <div class='hexagon h-1-2'></div>
           <div class='hexagon h-1-3'></div>
           <div class='hexagon h-1-4'></div>
@@ -37,7 +40,7 @@
           <div class='hexagon h-1-9'></div>
           <div class='hexagon h-1-10'></div>
           <div class='hexagon h-1-11'></div>
-          <div class='hexagon h-1-12 state'></div>
+          <div class='hexagon h-1-12 state' id="Maine"></div>
         </div>
         <div class='wrapper'>
           <div class='hexagon h-2-1'></div>
@@ -49,63 +52,63 @@
           <div class='hexagon h-2-7'></div>
           <div class='hexagon h-2-8'></div>
           <div class='hexagon h-2-9'></div>
-          <div class='hexagon h-2-10 state'></div>
-          <div class='hexagon h-2-11 state'></div>
-          <div class='hexagon h-2-12'></div>
+          <div class='hexagon h-2-10'></div>
+          <div class='hexagon h-2-11 state' id="Vermont"></div>
+          <div class='hexagon h-2-12 state' id="New Hampshire"></div>
         </div>
         <div class='wrapper'>
           <div class='hexagon h-3-1'></div>
-          <div class='hexagon h-3-2 state'></div>
-          <div class='hexagon h-3-3 state'></div>
-          <div class='hexagon h-3-4 state'></div>
-          <div class='hexagon h-3-5 state'></div>
-          <div class='hexagon h-3-6 state'></div>
+          <div class='hexagon h-3-2 state' id="Washington"></div>
+          <div class='hexagon h-3-3 state' id="Montana"></div>
+          <div class='hexagon h-3-4 state' id="North Dakota"></div>
+          <div class='hexagon h-3-5 state' id="Minnesota"></div>
+          <div class='hexagon h-3-6 state' id="Wisconsin"></div>
           <div class='hexagon h-3-7'></div>
-          <div class='hexagon h-3-8 state'></div>
+          <div class='hexagon h-3-8 state' id="Michigan"></div>
           <div class='hexagon h-3-9'></div>
-          <div class='hexagon h-3-10 state'></div>
-          <div class='hexagon h-3-11 state'></div>
-          <div class='hexagon h-3-12 state'></div>
+          <div class='hexagon h-3-10 state' id="New York"></div>
+          <div class='hexagon h-3-11 state' id="Massachusetts"></div>
+          <div class='hexagon h-3-12 state' id="Rhode Island"></div>
         </div>
         <div class='wrapper'>
           <div class='hexagon h-4-1'></div>
-          <div class='hexagon h-4-2 state'></div>
-          <div class='hexagon h-4-3 state'></div>
-          <div class='hexagon h-4-4 state'></div>
-          <div class='hexagon h-4-5 state'></div>
-          <div class='hexagon h-4-6 state'></div>
-          <div class='hexagon h-4-7 state'></div>
-          <div class='hexagon h-4-8 state'></div>
-          <div class='hexagon h-4-9 state'></div>
-          <div class='hexagon h-4-10 state'></div>
-          <div class='hexagon h-4-11 state'></div>
-          <div class='hexagon h-4-12'></div>
+          <div class='hexagon h-4-2'></div>
+          <div class='hexagon h-4-3 state' id="Idaho"></div>
+          <div class='hexagon h-4-4 state' id="Wyoming"></div>
+          <div class='hexagon h-4-5 state' id="South Dakota"></div>
+          <div class='hexagon h-4-6 state' id="Iowa"></div>
+          <div class='hexagon h-4-7 state' id="Illinois"></div>
+          <div class='hexagon h-4-8 state' id="Indiana"></div>
+          <div class='hexagon h-4-9 state' id="Ohio"></div>
+          <div class='hexagon h-4-10 state' id="Pennsylvania"></div>
+          <div class='hexagon h-4-11 state' id="New Jersey"></div>
+          <div class='hexagon h-4-12 state' id="Connecticut"></div>
         </div>
         <div class='wrapper'>
           <div class='hexagon h-5-1'></div>
-          <div class='hexagon h-5-2 state'></div>
-          <div class='hexagon h-5-3 state'></div>
-          <div class='hexagon h-5-4 state'></div>
-          <div class='hexagon h-5-5 state'></div>
-          <div class='hexagon h-5-6 state'></div>
-          <div class='hexagon h-5-7 state'></div>
-          <div class='hexagon h-5-8 state'></div>
-          <div class='hexagon h-5-9 state'></div>
-          <div class='hexagon h-5-10 state'></div>
-          <div class='hexagon h-5-11 state'></div>
+          <div class='hexagon h-5-2 state' id="Oregon"></div>
+          <div class='hexagon h-5-3 state' id="Nevada"></div>
+          <div class='hexagon h-5-4 state' id="Colorado"></div>
+          <div class='hexagon h-5-5 state' id="Nebraska"></div>
+          <div class='hexagon h-5-6 state' id="Missouri"></div>
+          <div class='hexagon h-5-7 state' id="Kentucky"></div>
+          <div class='hexagon h-5-8 state' id="West Virginia"></div>
+          <div class='hexagon h-5-9 state' id="Virginia"></div>
+          <div class='hexagon h-5-10 state' id="Maryland"></div>
+          <div class='hexagon h-5-11 state' id="Deleware"></div>
           <div class='hexagon h-5-12'></div>
         </div>
         <div class='wrapper'>
           <div class='hexagon h-6-1'></div>
-          <div class='hexagon h-6-2 state'></div>
-          <div class='hexagon h-6-3 state'></div>
-          <div class='hexagon h-6-4 state'></div>
-          <div class='hexagon h-6-5 state'></div>
-          <div class='hexagon h-6-6 state'></div>
-          <div class='hexagon h-6-7 state'></div>
-          <div class='hexagon h-6-8 state'></div>
-          <div class='hexagon h-6-9 state'></div>
-          <div class='hexagon h-6-10 state'></div>
+          <div class='hexagon h-6-2'></div>
+          <div class='hexagon h-6-3 state' id="California"></div>
+          <div class='hexagon h-6-4 state' id="Utah"></div>
+          <div class='hexagon h-6-5 state' id="New Mexico"></div>
+          <div class='hexagon h-6-6 state' id="Kansas"></div>
+          <div class='hexagon h-6-7 state' id="Arkansas"></div>
+          <div class='hexagon h-6-8 state' id="Tennessee"></div>
+          <div class='hexagon h-6-9 state' id="North Carolina"></div>
+          <div class='hexagon h-6-10 state' id="South Carolina"></div>
           <div class='hexagon h-6-11'></div>
           <div class='hexagon h-6-12'></div>
         </div>
@@ -113,26 +116,26 @@
           <div class='hexagon h-7-1'></div>
           <div class='hexagon h-7-2'></div>
           <div class='hexagon h-7-3'></div>
-          <div class='hexagon h-7-4 state'></div>
-          <div class='hexagon h-7-5 state'></div>
-          <div class='hexagon h-7-6 state'></div>
-          <div class='hexagon h-7-7 state'></div>
-          <div class='hexagon h-7-8 state'></div>
-          <div class='hexagon h-7-9 state'></div>
+          <div class='hexagon h-7-4 state' id="Arizona"></div>
+          <div class='hexagon h-7-5 state' id="Oklahoma"></div>
+          <div class='hexagon h-7-6 state' id="Louisiana"></div>
+          <div class='hexagon h-7-7 state' id="Mississippi"></div>
+          <div class='hexagon h-7-8 state' id="Alabama"></div>
+          <div class='hexagon h-7-9 state' id="Georgia"></div>
           <div class='hexagon h-7-10'></div>
           <div class='hexagon h-7-11'></div>
           <div class='hexagon h-7-12'></div>
         </div>
         <div class='wrapper'>
-          <div class='hexagon h-8-1 state'></div>
+          <div class='hexagon h-8-1 state' id="Hawaii"></div>
           <div class='hexagon h-8-2'></div>
           <div class='hexagon h-8-3'></div>
           <div class='hexagon h-8-4'></div>
-          <div class='hexagon h-8-5 state'></div>
-          <div class='hexagon h-8-6'></div>
+          <div class='hexagon h-8-5'></div>
+          <div class='hexagon h-8-6 state' id="Texas"></div>
           <div class='hexagon h-8-7'></div>
-          <div class='hexagon h-8-8 state'></div>
-          <div class='hexagon h-8-9'></div>
+          <div class='hexagon h-8-8'></div>
+          <div class='hexagon h-8-9 state' id="Florida"></div>
           <div class='hexagon h-8-10'></div>
           <div class='hexagon h-8-11'></div>
           <div class='hexagon h-8-12'></div>
@@ -141,7 +144,7 @@
 
       <!-- INPUT -->
       <div class="row input_solar">
-        <div class="input-field col s6">
+        <div class="input-field col s6" id="city_loc">
           <form>
             <input placeholder="city, state" id="location" type="text" class="validate">
             <label class="active" for="first_name2">Location</label>

@@ -5,6 +5,11 @@ nav .brand-logo {
 
 .input_solar {
   padding-top: 1em;
+  display: flex;
+}
+
+#city_loc {
+  margin: auto
 }
 
 .collapsible {
@@ -71,6 +76,12 @@ nav .brand-logo {
 }
 
 .state:hover {
-  /*transform: scale(2);*/
+  z-index: 1;
+  transform: scale(1.5);
   color: red;
+}
+
+.select_state {
+  display: flex;
+  justify-content: center;
 }
