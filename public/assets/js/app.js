@@ -41,15 +41,15 @@ function getSolarData() {
 }
 
 function getSolarProd(lat, long) {
-  //var list_collection = $(".ac_monthly_prod").children();
-  //var arr = [].slice.call(list_collection);
-  //console.log(arr);
+  $(".kWh").remove();
   var arr = $(".ac_prod");
   $.get("https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=5&module_type=1&losses=10&array_type=1&tilt=40&azimuth=180", function(data) {
     for (var i = 0; i < arr.length; i++) {
-      var ac_data = data.outputs.ac_monthly[i];
+      var ac_data = Math.round(data.outputs.ac_monthly[i]);
+      var current_item = arr[i];
       arr[i].innerHTML = ac_data;
     }
+    $( "<span class=kWh> kWh</span>" ).insertAfter( ".ac_prod" );
   });
   $(".solar-prod-data").attr("style", "display: block");
 }
