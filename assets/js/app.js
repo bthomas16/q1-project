@@ -14,9 +14,12 @@ function getCoordinates() {
     var city = loc.substring(0,stop);
     var state = loc.substring(stop+1, loc.length);
     $.get("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBecXcSD1TtOEr_uAXkjPsiqG8dRTsMsA0&address="+city+"+"+state, function(data) {
+      var arr = [];
       var lat = data.results[0].geometry.location.lat;
       var lng = data.results[0].geometry.location.lng;
-      
+      arr.push(lat);
+      arr.push(lng);
+      return arr;
     });
   });
 }
