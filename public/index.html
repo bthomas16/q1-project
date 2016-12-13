@@ -28,7 +28,7 @@
           <h2 class="state_feed">Select A State</h2>
         </div>
         <div class='wrapper'>
-          <div class='hexagon h-1-1 state' id="ALASKA"></div>
+          <div class='hexagon h-1-1 state' id="Alaska"></div>
           <div class='hexagon h-1-2'></div>
           <div class='hexagon h-1-3'></div>
           <div class='hexagon h-1-4'></div>
@@ -142,10 +142,13 @@
 
         <!-- SELECTED STUFF -->
         <div class="center_info">
-          <h5 class="state_selected">State</h5>
+          <h5 class="state_selected"></h5>
         </div>
+        <div class="center_info hidden_select">select a city</div>
         <div class="center_info button_city"></div>
-        <div class="center_info">OR</div>
+        <div class="center_info or">OR</div>
+        <div class="center_info space">Search in Your City</div>
+
       </div>
 
       <!-- INPUT -->
@@ -158,10 +161,11 @@
           </form>
         </div>
       </div>
+
       <!--CARDS-->
-      <div class="row solar_card" id="user_data_solar">
-        <div class="col s12 m8" id="center">
-          <div class="card orange lighten-2 hoverable">
+      <div class="row solar_card hidden_cards" id="user_data_solar">
+        <div class="col s12 m10" id="center">
+          <div class="card orange lighten-4 hoverable">
             <div class="card-content black-text">
               <span class="card-title">Solar Data</span>
               <ul class="collapsible solar_data_1" data-collapsible="expandable">
@@ -173,9 +177,9 @@
       </div>
 
       <!-- Solar Production Card -->
-      <div class="row solar_card">
-        <div class="col s12 m8" id="center">
-          <div class="card orange lighten-2 hoverable">
+      <div class="row solar_card hidden_cards">
+        <div class="col s12 m10" id="center">
+          <div class="card orange lighten-4 hoverable">
             <div class="card-content black-text">
               <span class="card-title">Solar Production</span>
               <div class="solar-prod-data">
@@ -247,9 +251,9 @@
       <!-- Solar Production Card End -->
 
       <!--Finanical Incentives-->
-      <div class="row solar_card">
-        <div class="col s12 m8" id="center">
-          <div class="card orange lighten-2 hoverable">
+      <div class="row solar_card hidden_cards">
+        <div class="col s12 m10" id="center">
+          <div class="card orange lighten-4 hoverable">
             <div class="card-content black-text">
               <span class="card-title">Finanical Incentives</span>
               <ul class="collapsible popout solar_data_3" data-collapsible="accordion">
@@ -268,24 +272,21 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">Solar Spot</h5>
+            <p class="grey-text text-lighten-4">A web app powered to help your future solar investment.</p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
               <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <div class="container center_info">
+        © 2016 Teach Solar Power
         </div>
       </div>
     </footer>

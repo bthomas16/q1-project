@@ -3,8 +3,8 @@ main {
   flex-direction: column;
 }
 
-nav {
-  background-color: #E83A69;
+nav, footer.page-footer {
+  background-color: #FFC267;
 }
 
 nav .brand-logo {
@@ -85,7 +85,7 @@ nav .brand-logo {
 }
 
 .state {
-  color:gray;
+  color: #7F7059;
 }
 
 .state:hover {
@@ -110,3 +110,29 @@ nav .brand-logo {
 #center {
   margin: auto;
 }
+
+.button_city > a.btn {
+  margin: 0.5em;
+  background-color: #A0B2FF;
+}
+
+.or {
+  margin-top: 0.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 1em;
+  border-top: solid gray 1px;
+}
+
+.space {
+  margin-top: 0.6em;
+}
+
+.hidden_select {
+  display: none;
+}
+
+.hidden_cards {
+  display: none;
+}
+/*FOOTER*/

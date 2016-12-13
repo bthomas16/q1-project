@@ -17,7 +17,7 @@ function state_click() {
     $("#location").val("");
 
     // popular city object
-    var cities = { Colorado: ["Denver", "Boulder", "Fort Collins", "Colorado Springs"] };
+    var cities = { Colorado: ["Denver", "Boulder", "Fort Collins", "Colorado Springs", "Pueblo"], Alabama: ["Birmingham", "Montgomery", "Mobile", "Huntsville", "Tuscaloosa"], Alaska: ["Anchorage", "Juneau", "Fairbanks", "Sitka", "Ketchikan"], Arizona: ["Phoenix", "Tucson", "Mesa", "Glendale", "Scottsdale"] };
 
     // city_list is popular cities of selected state
     city_list = cities[state];
@@ -30,10 +30,10 @@ function state_click() {
       $(".button_city").append("<a class='btn' href='#'>"+city_list[i]+"</a>");
     }
 
+    $(".hidden_select").removeClass("hidden_select");
+
     //city click function
     city_click();
-
-    //console.log(state);
 
   });
 }
@@ -43,7 +43,7 @@ function city_click() {
     var city_selected = $(this).text();
     var state_selected = $(".state_selected").text();
     getCoordinates(city_selected, state_selected);
-    scroll_down();
+
   });
 }
 
@@ -63,6 +63,8 @@ function getCoordinates(city, state) {
     getSolarData();
     getSolarProd(lat, lng);
     energy_incentives(lat, lng);
+    $(".solar_card").removeClass("hidden_cards");
+    scroll_down();
   });
 }
 
