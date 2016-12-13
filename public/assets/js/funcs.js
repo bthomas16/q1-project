@@ -54,7 +54,11 @@ function getCoordinates(city, state) {
     var lat = data.results[0].geometry.location.lat;
     var lng = data.results[0].geometry.location.lng;
     $(".solar_data_1").html("");
+
+    // solar location appended
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>place</i>"+City+", "+State+"</div><div class='collapsible-body'><ul><li class='lat'>Latitude: "+lat+"</li><li class='long'>Longitude: "+lng+"</li></ul></div></li>");
+
+    // solar resource data appended
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"solar resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
     getSolarData();
     getSolarProd(lat, lng);
@@ -111,7 +115,21 @@ function energy_incentives(lat, long) {
       var sum = item.summary;
       if (!master_result_obj.hasOwnProperty(cat)) {
         master_result_obj[cat] = [{[name]: sum}];
+      } else {
+        master_result_obj[cat].push({[name]: sum});
       }
+    }
+
+    var fin_incents = master_result_obj["Financial Incentive"];
+    for (var j = 0; j < fin_incents.length; j++) {
+      cur_obj = fin_incents[j];
+      var keys_arr = Object.keys(cur_obj);
+      var cur_key = keys_arr[0];
+      var cur_val = cur_obj[cur_key];
+      // console.log(cur_key);
+      // console.log(cur_val);
+      var fin_data = $("<li><div class='collapsible-header'>"+cur_key+"</div><div class='collapsible-body'><div class='container'>"+cur_val+"</div></div></li>");
+      $(".solar_data_3").append(fin_data);
     }
   });
 }
