@@ -11,11 +11,10 @@
     <!-- NAV -->
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Solar Maps</a>
+        <a href="#" class="brand-logo">Solar Spot</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
+          <li><a href="sass.html">About</a></li>
+          <li><a href="badges.html">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -145,7 +144,7 @@
         <div class="center_info">
           <h5 class="state_selected">State</h5>
         </div>
-        <div class="center_info chip_city"></div>
+        <div class="center_info button_city"></div>
         <div class="center_info">OR</div>
       </div>
 
@@ -159,11 +158,11 @@
           </form>
         </div>
       </div>
-      <!--CARD-->
-      <div class="row" id="user_data_solar">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1 hoverable">
-            <div class="card-content white-text">
+      <!--CARDS-->
+      <div class="row solar_card" id="user_data_solar">
+        <div class="col s12 m8" id="center">
+          <div class="card orange lighten-2 hoverable">
+            <div class="card-content black-text">
               <span class="card-title">Solar Data</span>
               <ul class="collapsible solar_data_1" data-collapsible="expandable">
 
@@ -171,71 +170,97 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1 hoverable">
-            <div class="card-content white-text">
+      </div>
+      <div class="row solar_card">
+        <div class="col s12 m8" id="center">
+          <div class="card orange lighten-2 hoverable">
+            <div class="card-content black-text">
               <span class="card-title">Solar Production</span>
               <div class="solar-prod-data">
-              <h5 class="production">Based on average system</h5>
-              <ul class="ac_monthly_prod">
-                <li class="jan_prod">
-                  <span>January: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="feb_prod">
-                  <span>Febuary: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="mar_prod">
-                  <span>March: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="apr_prod">
-                  <span>April: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="may_prod">
-                  <span>May: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="jun_prod">
-                  <span>June: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="jul_prod">
-                  <span>July: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="aug_prod">
-                  <span>August: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="sep_prod">
-                  <span>September: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="oct_prod">
-                  <span>October: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="nov_prod">
-                  <span>November: </span>
-                  <span class="ac_prod"></span>
-                </li>
-                <li class="dec_prod">
-                  <span>December: </span>
-                  <span class="ac_prod"></span>
-                </li>
-              </ul>
+                <h5 class="production">Based on average system</h5>
+                <table class="highlight bordered">
+                  <thead>
+                    <tr>
+                        <th data-field="month">Month</th>
+                        <th data-field="power">Power (kWh)</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>January</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>Febuary</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>March</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>April</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>May</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>June</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>July</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>August</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>September</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>October</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>November</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                    <tr>
+                      <td>December</td>
+                      <td class="ac_prod"></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- SOLAR INCENTIVES -->
+      <div class="row solar_card" id="user_data_solar">
+        <div class="col s12 m8" id="center">
+          <div class="card orange lighten-2 hoverable">
+            <div class="card-content black-text">
+              <span class="card-title">Solar Incentives</span>
+              <ul class="collapsible" data-collapsible="expandable">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SOLAR INCENTIVES -->
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script src = "assets/js/map.js"></script>
+    <script src="assets/js/funcs.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

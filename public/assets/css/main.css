@@ -1,3 +1,12 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: #E83A69;
+}
+
 nav .brand-logo {
   padding-left: 0.5em;
 }
@@ -21,7 +30,7 @@ nav .brand-logo {
 }
 
 .production {
-  border-top: solid white 1px;
+  /*border-top: solid white 1px;*/
   padding-top: 1em;
 }
 
@@ -53,6 +62,10 @@ nav .brand-logo {
   color: white;
   background-color: currentColor;
   margin: 5.75px 0.5px;
+/*
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
+
 }
 .hexagon:before, .hexagon:after {
   content: "";
@@ -88,4 +101,12 @@ nav .brand-logo {
 
 .chip {
   cursor: pointer;
+}
+
+.solar_card {
+  display: flex;
+}
+
+#center {
+  margin: auto;
 }
