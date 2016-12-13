@@ -83,6 +83,8 @@ function state_click() {
 
     //city click function
     city_click();
+    animateSearch();
+
 
   });
 }
@@ -93,6 +95,14 @@ function city_click() {
     var state_selected = $(".state_selected").text();
     getCoordinates(city_selected, state_selected);
 
+  });
+}
+
+function animateSearch() {
+  $(".button_city > a.btn").on("mouseover", function() {
+    $(".hidden_form").slideDown("slow", function() {
+      //$(".hidden_form").attr("style", "display: flex");
+    });
   });
 }
 

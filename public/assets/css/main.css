@@ -116,14 +116,6 @@ nav .brand-logo {
   background-color: #A0B2FF;
 }
 
-.or {
-  margin-top: 0.5em;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 1em;
-  border-top: solid gray 1px;
-}
-
 .space {
   margin-top: 0.6em;
 }
@@ -133,6 +125,14 @@ nav .brand-logo {
 }
 
 .hidden_cards {
+  display: none;
+}
+
+.hidden_form {
+  display: none;
+}
+
+.hidden_or {
   display: none;
 }
 /*FOOTER*/
