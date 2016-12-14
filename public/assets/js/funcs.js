@@ -79,7 +79,7 @@ function state_click() {
 
     // dynamically appends city buttons
     for (var i = 0; i < city_list.length; i++) {
-      $(".button_city").append("<a class='btn' href='#'>"+city_list[i]+"</a>");
+      $(".button_city").append("<a class='btn'>"+city_list[i]+"</a>");
     }
 
     $(".hidden_select").removeClass("hidden_select");
