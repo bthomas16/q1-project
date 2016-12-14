@@ -185,6 +185,12 @@ td, th {
 
 .bill_value, .power_results {
   font-size: 2em;
+  display: inline-block;
+}
+
+.power_results {
+  float:right;
+
 }
 
 /*FOOTER*/

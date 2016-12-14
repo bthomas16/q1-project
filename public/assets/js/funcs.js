@@ -193,7 +193,7 @@ function utility_rates(lat, long) {
     $(".utility_cost").text(cost_result);
     // call solar prod func
     getSolarProd(lat, long, cost);
-    electric_bill(cost);
+
   });
 }
 
@@ -210,6 +210,7 @@ function getSolarProd(lat, long, cost) {
       var next = $(current_item).next();
       $(next).text(value);
     }
+    electric_bill(cost);
   });
   $(".solar-prod-data").attr("style", "display: block");
 }
@@ -217,20 +218,33 @@ function getSolarProd(lat, long, cost) {
 
 // Electic Bill
 function electric_bill(rate) {
+  display_data(rate);
+  $("#bill").on("input", function() {
+    display_data(rate);
+
+  });
+}
+
+function display_data(rate) {
   var money = $("#test5").val();
   var money_str = money.toString();
   var money_result = "$ " + money_str;
   $(".bill_value").text(money_result);
-  $("#bill").on("input", function() {
-    var money = $("#test5").val();
-    var money_str = money.toString();
-    var money_result = "$ " + money_str;
-    $(".bill_value").text(money_result);
-    var power = (money/rate).toFixed(1);
-    var power_str = power.toString();
-    var power_result = power_str + " kWh";
-    $(".power_results").text(power_result);
-  });
+  var power = (money/rate).toFixed(1);
+  var power_str = power.toString();
+  var power_result = power_str + " kWh";
+  $(".power_results").text(power_result);
+  var rows = $(".ac_row");
+  for (var k = 0; k < rows.length; k++) {
+    var cur = rows[k];
+    var arr = cur.children;
+    var watts = arr[1];
+    if ($(watts).text() > power) {
+      $(cur).attr("style", "background-color: lightgreen");
+    } else {
+      $(cur).attr("style", "background-color: white");
+    }
+  }
 }
 
 
