@@ -118,7 +118,7 @@ function getCoordinates(city, state) {
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>place</i>"+City+", "+State+"</div><div class='collapsible-body'><ul><li class='lat'>Latitude: "+lat+"</li><li class='long'>Longitude: "+lng+"</li></ul></div></li>");
 
     // solar resource data appended
-    $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"solar resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
+    $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"Average Solar Resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
     getSolarData();
     getSolarProd(lat, lng);
     energy_incentives(lat, lng);
@@ -182,6 +182,7 @@ function energy_incentives(lat, long) {
     }
 
     var fin_incents = master_result_obj["Financial Incentive"];
+    $(".solar_data_3").html("")
     for (var j = 0; j < fin_incents.length; j++) {
       cur_obj = fin_incents[j];
       var keys_arr = Object.keys(cur_obj);

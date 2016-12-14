@@ -11,6 +11,19 @@ nav .brand-logo {
   padding-left: 0.5em;
 }
 
+.prod_table {
+  background-color: #fff;
+}
+
+.prod_btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #A0B2FF;
+}
+
+td, th {
+  padding-left: 2em;
+}
 
 .input_solar {
   padding-top: 1em;
@@ -30,8 +43,9 @@ nav .brand-logo {
 }
 
 .production {
-  /*border-top: solid white 1px;*/
-  padding-top: 1em;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-right: 0.8em;
 }
 
 .solar-prod-data {
