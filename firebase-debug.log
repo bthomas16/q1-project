@@ -1,0 +1,34 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.0.0/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v7.0.0
+[debug] Time:         Wed Dec 14 2016 14:53:47 GMT-0700 (MST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/q1projectsolar 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/q1projectsolar/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'q1projectsolar'...
+[info] 
+[info] i  deploying hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/q1projectsolar/uploads/-KYzJwNV9rTsc6d8i7E0?fileCount=11&message= 
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  hosting: public folder uploaded successfully
+[info] ✔  hosting: 11 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/q1projectsolar/releases
+[debug] Error: connect ECONNREFUSED 23.251.151.130:443
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+[error] 
+[error] Error: Server Error. connect ECONNREFUSED 23.251.151.130:443

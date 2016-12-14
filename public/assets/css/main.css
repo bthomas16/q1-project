@@ -183,4 +183,8 @@ td, th {
   background-color: #eee;
 }
 
+.bill_value, .power_results {
+  font-size: 2em;
+}
+
 /*FOOTER*/
