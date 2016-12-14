@@ -39,6 +39,11 @@ td, th {
   padding-left: 2em;
 }
 
+td {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
 .input_solar {
   padding-top: 1em;
   display: flex;

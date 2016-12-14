@@ -239,7 +239,8 @@ function display_data(rate) {
     var cur = rows[k];
     var arr = cur.children;
     var watts = arr[1];
-    if ($(watts).text() > power) {
+    var watt_solar = $(watts).text();
+    if ( Number(watt_solar) > Number(power)) {
       $(cur).attr("style", "background-color: lightgreen");
     } else {
       $(cur).attr("style", "background-color: white");
