@@ -23,9 +23,10 @@
     <main>
       <!-- <div class="image_map"> -->
       <img class="responsive-img" src="assets/images/main.jpg">
-      
+
       <!-- </div> -->
-      <div class="container main_stuff"
+      <div class="container main_stuff">
+      <a name="input"></a>
         <!-- MAP -->
         <div class="row input_map">
           <div class="center_info">
@@ -167,13 +168,14 @@
               <input placeholder="Search for a city" id="location" type="text" class="validate" autofocus>
               <label class="active" for="first_name2"></label>
               <input type="submit" value="enter" />
+
             </form>
           </div>
         </div>
 
         <!-- RESET BUTTON -->
         <div class="center_info reset_button">
-          <a class="waves-effect waves-light btn" href="index.html"><i class="material-icons">loop</i></a>
+          <a class="waves-effect waves-light btn reset_button" href="index.html#input"><i class="material-icons">loop</i></a>
         </div>
 
         <!--CARDS-->
@@ -207,6 +209,29 @@
                 <ul class="collapsible" data-collapsible="expandable">
                   <li>
                     <div class="collapsible-header utility_cost center_info"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOLAR POTENTIAL STATUS -->
+        <div class="row solar_card hidden_cards">
+          <div class="col s12 m10" id="center">
+            <div class="card orange lighten-4 hoverable">
+              <div class="card-content black-text">
+                <div class="valign-wrapper">
+                  <span class="card-title">Solar Potential</span>
+
+                  <!-- tooltip -->
+                  <a class="btn tooltipped prod_btn" data-position="right" data-delay="100" data-tooltip="Results based on local solar resource data">?</a>
+                </div>
+
+                <ul class="collapsible" data-collapsible="expandable">
+                  <li>
+                    <div class="collapsible-header potential_status center_info">
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -320,6 +345,7 @@
           </div>
         </div>
         <!--Finanical Incentives End-->
+
       </div>
     </main>
 

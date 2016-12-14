@@ -160,8 +160,29 @@ function getSolarData() {
     var lat_tilt = outputs.avg_lat_tilt.annual;
     // append lat tilt data
     $(".solar_data_2").append("<li class='lat_tilt collection-item'>Average annual lat-tilt: "+lat_tilt+"</li>");
+
+    solar_status(dni, ghi, lat_tilt);
+
   });
 }
+
+// SOLAR POTENTIAL STATUS
+function solar_status(one, two, three) {
+  var avg = (one+two+three) / 3;
+  var output = $(".potential_status");
+  if (avg < 3.9) {
+    output.text("Poor");
+    output.attr("style", "color: red");
+  } else if (avg > 4.5){
+    output.text("Favorable");
+    output.attr("style", "color: green");
+  } else {
+    output.text("Average");
+
+  }
+}
+
+
 
 // GET UTILITY RATES
 function utility_rates(lat, long) {
@@ -229,4 +250,11 @@ function scroll_down() {
   $('html, body').animate({
     scrollTop: $("#user_data_solar").offset().top
   }, 2000);
+}
+
+// RESET BUTTON
+function reset_button() {
+  $(".reset_button").click(function() {
+    window.location.reload();
+  });
 }

@@ -141,7 +141,7 @@ td, th {
   background-color: #A0B2FF;
 }
 
-.utility_cost {
+.utility_cost, .potential_status  {
   font-size: 2em;
   height: 3em;
   align-items: center;
