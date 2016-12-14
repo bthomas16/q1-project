@@ -3,6 +3,11 @@ main {
   flex-direction: column;
 }
 
+main_stuff {
+  display: flex;
+  flex-direction: column;
+}
+
 nav, footer.page-footer {
   background-color: #FFC267;
 }
@@ -160,5 +165,10 @@ td, th {
 
 .hidden_or {
   display: none;
+}
+
+.image_map {
+  height: 70vh;
+
 }
 /*FOOTER*/

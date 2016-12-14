@@ -125,7 +125,6 @@ function getCoordinates(city, state) {
     $(".solar_data_1").append("<li><div class='collapsible-header'><i class='material-icons'>assessment</i>"+"Average Solar Resources"+"</div><div class='collapsible-body'><ul class='solar_data_2'></ul></div></li>");
     getSolarData();
     utility_rates(lat, lng);
-    //getSolarProd(lat, lng);
     energy_incentives(lat, lng);
     $(".solar_card").removeClass("hidden_cards");
     scroll_down();
@@ -150,17 +149,17 @@ function getSolarData() {
     // get dni data
     var dni = outputs.avg_dni.annual;
     // append dni data
-    $(".solar_data_2").append("<li class='dni collection-item'>Annual avg dni: "+dni+"</li>");
+    $(".solar_data_2").append("<li class='dni collection-item'>Average annual dni: "+dni+"</li>");
 
     // get ghi data
     var ghi = outputs.avg_ghi.annual;
     // append ghi data
-    $(".solar_data_2").append("<li class='ghi collection-item'>Annual avg ghi: "+ghi+"</li>");
+    $(".solar_data_2").append("<li class='ghi collection-item'>Average annual ghi: "+ghi+"</li>");
 
     // get lat tilt data
     var lat_tilt = outputs.avg_lat_tilt.annual;
     // append lat tilt data
-    $(".solar_data_2").append("<li class='lat_tilt collection-item'>Annual avg lat-tilt: "+lat_tilt+"</li>");
+    $(".solar_data_2").append("<li class='lat_tilt collection-item'>Average annual lat-tilt: "+lat_tilt+"</li>");
   });
 }
 
@@ -171,18 +170,8 @@ function utility_rates(lat, long) {
     var cost_str = cost.toString();
     var cost_result = "$ " + cost_str + " / kWh";
     $(".utility_cost").text(cost_result);
-
+    // call solar prod func
     getSolarProd(lat, long, cost);
-    //  calculate monthly electricty value
-    // var arr = $(".ac_prod");
-    // for (var i = 0; i < arr.length; i++) {
-    //   var cur = arr[i];
-    //   var next = $(cur).next();
-    //   var value = cost
-    //   $(next).text()
-    // }
-    // var cost_string = $(".utility_cost").text();
-    // var cost = Number(cost_string.substring(2, 8));
   });
 }
 
@@ -202,8 +191,6 @@ function getSolarProd(lat, long, cost) {
   });
   $(".solar-prod-data").attr("style", "display: block");
 }
-
-
 
 
 // GET REQUEST FOR SOLAR POWER FIN INCENTIVES
