@@ -13,12 +13,14 @@ nav .brand-logo {
 
 .prod_table {
   background-color: #fff;
+  margin: 0.5rem 0 1rem 0;
 }
 
 .prod_btn {
   padding-left: 15px;
   padding-right: 15px;
   background-color: #A0B2FF;
+  margin-left: 1em;
 }
 
 td, th {
@@ -39,7 +41,11 @@ td, th {
 }
 
 .collapsible-body {
-  background-color: gray;
+  background-color: #eeeeee;
+}
+
+.lat, .long, .dni, .ghi, .lat_tilt {
+  padding: 1em;
 }
 
 .production {
@@ -113,8 +119,8 @@ td, th {
   justify-content: center;
 }
 
-.chip {
-  cursor: pointer;
+.reset_button {
+  margin-bottom: 2em;
 }
 
 .solar_card {
@@ -128,6 +134,12 @@ td, th {
 .button_city > a.btn {
   margin: 0.5em;
   background-color: #A0B2FF;
+}
+
+.utility_cost {
+  font-size: 2em;
+  height: 3em;
+  align-items: center;
 }
 
 .space {
