@@ -99,11 +99,17 @@ body {
   .main_stuff {
     display: flex;
     flex-direction: column;
-        padding-top: 8vh;
+        padding-top: 4vh;
   }
 
-
   /*MAP*/
+
+  .state_feed {
+    /*centering state feed over map*/
+    padding-left: 1.3em;
+    font-family: 'Nixie One', cursive;
+  }
+
   .input_map {
     display: flex;
     flex-direction: column;
@@ -115,20 +121,25 @@ body {
     justify-content: center;
     margin-top: -5px;
   }
+
   .wrapper:nth-child(even) {
-    margin-left: 20.5px;
+    margin-left: 3em;
   }
 
   .hexagon {
-    /*display: inline-block;
-    position: relative;*/
-    width: 20px;
-    height: 20px;
-    margin: 0.1em 0.1em;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    margin: 0.02em 0.1em;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /*clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
 
+  .state_abv {
+    font-family: 'Nixie One', cursive;
+    color: white;
   }
 
   .state {
@@ -138,7 +149,7 @@ body {
   .state:hover {
     z-index: 1;
     transform: scale(1.5);
-    color: red;
+    background-color: red;
   }
 
 
