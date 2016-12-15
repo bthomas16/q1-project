@@ -321,3 +321,12 @@ function slide_front_text() {
       });
   });
 }
+
+
+
+function currentYear() {
+  var today = new Date();
+  var year = today.getFullYear();
+  var year_space = year+ " ";
+  $("#year_copy").text(year_space);
+}

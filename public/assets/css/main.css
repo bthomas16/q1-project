@@ -75,6 +75,11 @@ body {
 
   #banner_button {
     width: 20vw;
+    background-color: #6C8BBF;
+  }
+
+  #banner_button:hover {
+    background-color: #4F668C;
   }
 
 /*CONTENT*/
@@ -164,6 +169,7 @@ body {
     color: black;
   }
 
+
   #location:focus {
     border-bottom: 1px solid #E8D99C;
     -webkit-box-shadow: 0 1px 0 0 #E8D99C;
@@ -185,11 +191,18 @@ body {
     color: black;
   }
 
+  .space_below {
+    margin-bottom: 0.8em;
+  }
+
   /*ROWS BACKGROUND*/
   .cards_background {
     background-color: #667EA5;
   }
 
+  .card-content {
+    background-color: #fdfdfd;
+  }
 
   .prod_table {
     background-color: #fff;
@@ -199,7 +212,7 @@ body {
   .prod_btn {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #A1F2EE;
+    background-color: #E8D99C;
     margin-left: 1em;
   }
 
@@ -310,4 +323,21 @@ body {
 
   footer.page-footer {
     margin-top: 0;
+  }
+
+  .col > .footer_title {
+    color: black;
+    font-family: 'Nixie One', cursive;
+  }
+
+  .footer_sub {
+    color: black;
+  }
+
+  .bottom_line_div {
+    color: black;
+  }
+
+  .bottom_line {
+    margin: 0;
   }
