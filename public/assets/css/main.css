@@ -28,15 +28,6 @@ body {
     nav .brand-logo {
       padding-left: 0;
     }
-
-    /*.banner_title {
-      font-size: 2em;
-    }
-
-    .animated_text {
-      font-size: 1.5em;
-    }*/
-
   }
 
   nav .nav-wrapper {
@@ -62,22 +53,7 @@ body {
 
 /*MAIN*/
 
-  main {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-  }
-
-  .main_box {
-    /*border: solid 1px black;*/
-    border-radius: 1em;
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+/*BANNER*/
 
   .banner_title {
     color: white;
@@ -101,179 +77,183 @@ body {
     width: 20vw;
   }
 
-.main_stuff {
-  display: flex;
-  flex-direction: column;
-}
+/*CONTENT*/
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+
+  .main_box {
+    /*border: solid 1px black;*/
+    border-radius: 1em;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main_stuff {
+    display: flex;
+    flex-direction: column;
+        padding-top: 8vh;
+  }
+
+
+  /*MAP*/
+  .input_map {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+  }
+  .wrapper:nth-child(even) {
+    margin-left: 20.5px;
+  }
+
+  .hexagon {
+    /*display: inline-block;
+    position: relative;*/
+    width: 20px;
+    height: 20px;
+    margin: 0.1em 0.1em;
+
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /*clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
+
+  }
+
+  .state {
+    background-color: #7F7059;
+  }
+
+  .state:hover {
+    z-index: 1;
+    transform: scale(1.5);
+    color: red;
+  }
+
+
+  .prod_table {
+    background-color: #fff;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .prod_btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #A0B2FF;
+    margin-left: 1em;
+  }
+
+  td, th {
+    padding-left: 2em;
+  }
+
+  td {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+  }
+
+  .input_solar {
+    padding-top: 1em;
+    display: flex;
+  }
+
+  #city_loc {
+    margin: auto
+  }
+
+  .collapsible {
+    color: black;
+  }
+
+  .collapsible-body {
+    background-color: #eeeeee;
+  }
+
+  .lat, .long, .dni, .ghi, .lat_tilt {
+    padding: 1em;
+  }
+
+  .production {
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-right: 0.8em;
+  }
+
+  .solar-prod-data {
+    display: none;
+  }
 
 
 
-.prod_table {
-  background-color: #fff;
-  margin: 0.5rem 0 1rem 0;
-}
+  .center_info {
+    display: flex;
+    justify-content: center;
+  }
 
-.prod_btn {
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #A0B2FF;
-  margin-left: 1em;
-}
+  .reset_button {
+    margin-bottom: 2em;
+  }
 
-td, th {
-  padding-left: 2em;
-}
+  .solar_card {
+    display: flex;
+  }
 
-td {
-  padding-bottom: 0.3em;
-  padding-top: 0.3em;
-}
+  #center {
+    margin: auto;
+  }
 
-.input_solar {
-  padding-top: 1em;
-  display: flex;
-}
+  .button_city > a.btn {
+    margin: 0.5em;
+    background-color: #A0B2FF;
+  }
 
-#city_loc {
-  margin: auto
-}
+  .utility_cost, .potential_status  {
+    font-size: 2em;
+    height: 3em;
+    align-items: center;
+  }
 
-.collapsible {
-  color: black;
-}
+  .space {
+    margin-top: 0.6em;
+  }
 
-.collapsible-body {
-  background-color: #eeeeee;
-}
+  .hidden_select {
+    display: none;
+  }
 
-.lat, .long, .dni, .ghi, .lat_tilt {
-  padding: 1em;
-}
+  .hidden_cards {
+    display: none;
+  }
 
-.production {
-  display: inline-block;
-  margin-bottom: 1em;
-  margin-right: 0.8em;
-}
+  .hidden_form {
+    display: none;
+  }
 
-.solar-prod-data {
-  display: none;
-}
-
-/*MAP*/
-.input_map {
-  display: flex;
-  flex-direction: column;
-  padding-top: 2em;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: -5px;
-}
-.wrapper:nth-child(even) {
-  margin-left: 20.5px;
-}
-
-.hexagon {
-  display: inline-block;
-  position: relative;
-  width: 20px;
-  height: 11.5px;
-  color: white;
-  background-color: currentColor;
-  margin: 5.75px 0.5px;
-/*
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);*/
-
-}
-.hexagon:before, .hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-}
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 5.75px solid currentColor;
-}
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 5.75px solid currentColor;
-}
-
-.state {
-  color: #7F7059;
-}
-
-.state:hover {
-  z-index: 1;
-  transform: scale(1.5);
-  color: red;
-}
-
-.center_info {
-  display: flex;
-  justify-content: center;
-}
-
-.reset_button {
-  margin-bottom: 2em;
-}
-
-.solar_card {
-  display: flex;
-}
-
-#center {
-  margin: auto;
-}
-
-.button_city > a.btn {
-  margin: 0.5em;
-  background-color: #A0B2FF;
-}
-
-.utility_cost, .potential_status  {
-  font-size: 2em;
-  height: 3em;
-  align-items: center;
-}
-
-.space {
-  margin-top: 0.6em;
-}
-
-.hidden_select {
-  display: none;
-}
-
-.hidden_cards {
-  display: none;
-}
-
-.hidden_form {
-  display: none;
-}
-
-.hidden_or {
-  display: none;
-}
+  .hidden_or {
+    display: none;
+  }
 
 
 
-.bill_value, .power_results {
-  font-size: 2em;
-  display: inline-block;
-}
+  .bill_value, .power_results {
+    font-size: 2em;
+    display: inline-block;
+  }
 
-.power_results {
-  float:right;
+  .power_results {
+    float:right;
 
-}
+  }
 
-/*FOOTER*/
+  /*FOOTER*/
