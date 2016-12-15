@@ -293,3 +293,30 @@ function reset_button() {
     window.location.reload();
   });
 }
+
+// SCROLL DOWN AFTER BANNER CLICK
+function scroll_banner_button() {
+  var btn = $("#banner_button");
+  $(btn).click(function() {
+    $('html, body').animate({
+      scrollTop: $("#app_start").offset().top
+    }, 2000);
+  });
+}
+
+// ANIMATE BANNER TEXT
+function slide_front_text() {
+  $('.animated_text').slideUp(800, function() {
+      $(this).text('Environmentally Focused').slideDown(500).delay(800);
+      $(this).slideUp(800, function() {
+      	$(this).text("Renewable Energy").slideDown(500).delay(800);
+        $(this).slideUp(800, function() {
+        	$(this).text("It's Time to Start").slideDown(500).delay(2500);
+          	$(this).slideUp(1200, function() {
+            $(this).text("Do you live in a good solar area?").slideDown(800);
+          });
+
+        });
+      });
+  });
+}

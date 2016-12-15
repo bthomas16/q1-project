@@ -5,34 +5,39 @@
     <title>q1 project</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nixie+One" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
+
     <!-- NAV -->
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Solar Spot</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="sass.html">About</a></li>
-          <li><a href="badges.html">Contact</a></li>
+          <li><a class = "nav_right" href="badges.html">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <!--Main-->
     <main>
+
+      <!-- BANNER -->
       <div class="valign-wrapper">
-        <img class="responsive-img" src="assets/images/main.jpg">
+        <img class="responsive-img" src="assets/images/background.jpg">
         <div class="main_box">
           <div class="valign-wrapper" style="justify-content:center; flex-direction: column">
-            <h4 class="center-align">Solar Friendly?</h4>
-            <h5>find out now</h5>
+            <h3 class="banner_title">A Solar Powered Future</h3>
+            <h5 class="animated_text"></h5>
+            <a id="banner_button" class="btn-large waves-effect waves-orange">Find Out!</a>
           </div>
         </div>
       </div>
 
       <div class="container main_stuff">
-      <a name="input"></a>
+      <a name="input" id="app_start"></a>
         <!-- MAP -->
         <div class="row input_map">
           <div class="center_info">

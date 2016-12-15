@@ -1,27 +1,68 @@
+html {
+  font-family: 'Lato', sans-serif;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-main {
+
+/*NAV*/
+  nav, footer.page-footer {
+    background-color: #FFC267;
+  }
+
+  /*TOP LEFT LOGO*/
+  nav .brand-logo {
+    margin-left: 1em;
+    font-family: 'Nixie One', cursive;
+  }
+
+  nav ul a {
+    font-family: 'Nixie One', cursive;
+  }
+
+  .nav_right {
+    margin-right: 1em;
+  }
+
+/*MAIN*/
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+
+  .main_box {
+    /*border: solid 1px black;*/
+    border-radius: 1em;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    /*background-color: #eee;*/
+  }
+
+  .banner_title {
+    color: white;
+    font-family: 'Nixie One', cursive;
+  }
+
+  .animated_text {
+    margin-bottom: 1.5em;
+    color: white;
+    font-family: 'Nixie One', cursive;
+  }
+
+
+.main_stuff {
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
 }
 
-main_stuff {
-  display: flex;
-  flex-direction: column;
-}
 
-nav, footer.page-footer {
-  background-color: #FFC267;
-}
-
-nav .brand-logo {
-  padding-left: 0.5em;
-}
 
 .prod_table {
   background-color: #fff;
@@ -40,8 +81,8 @@ td, th {
 }
 
 td {
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
 }
 
 .input_solar {
@@ -179,14 +220,7 @@ td {
   display: none;
 }
 
-.main_box {
-  border: solid 1px black;
-  border-radius: 1em;
-  position: absolute;
-  width: 40%;
-  left: 30%;
-  background-color: #eee;
-}
+
 
 .bill_value, .power_results {
   font-size: 2em;
