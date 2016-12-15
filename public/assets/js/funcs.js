@@ -96,6 +96,7 @@ function animateSearch() {
     $(".hidden_form").slideDown("slow", function() {
 
     });
+    $(".reset_button").slideDown(800);
   });
 }
 
@@ -200,7 +201,7 @@ function utility_rates(lat, long) {
 // GET MONTHLY SOLAR POWER PRODUCTION VALUES
 function getSolarProd(lat, long, cost) {
   var arr = $(".ac_prod");
-  $.get("https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=5&module_type=1&losses=10&array_type=1&tilt=40&azimuth=180", function(data) {
+  $.get("https://developer.nrel.gov/api/pvwatts/v5.json?api_key=ZJH76qOhbyarfoAWyLVAtsKgRcGm5bdna1qd7gjz&format=json&lat="+lat+"&lon="+long+"&system_capacity=5&module_type=1&losses=8&array_type=1&tilt=40&azimuth=180", function(data) {
     for (var i = 0; i < arr.length; i++) {
       var ac_data = Math.round(data.outputs.ac_monthly[i]);
       var current_item = arr[i];
