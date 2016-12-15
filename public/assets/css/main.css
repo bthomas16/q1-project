@@ -347,3 +347,7 @@ body {
   .bottom_line {
     margin: 0;
   }
+
+  .about_header {
+    margin-top: 2em;
+  }
