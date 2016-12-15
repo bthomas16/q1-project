@@ -214,7 +214,13 @@ body {
     padding-right: 15px;
     background-color: #E8D99C;
     margin-left: 1em;
+    color: black;
   }
+
+  .prod_btn:hover {
+    background-color: #F6E75F;
+  }
+
 
   td, th {
     padding-left: 2em;
