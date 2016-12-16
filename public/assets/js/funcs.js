@@ -308,17 +308,13 @@ function scroll_banner_button() {
 // ANIMATE BANNER TEXT
 function slide_front_text() {
   $('.animated_text').slideUp(800, function() {
-      $(this).text('Environmentally Focused').slideDown(1000).delay(1000);
+    $(this).text('Environmentally Focused').slideDown(800).delay(1000);
+    $(this).slideUp(800, function() {
+    	$(this).text("It's Time to Start").slideDown(800).delay(1300);
       $(this).slideUp(800, function() {
-      	$(this).text("Renewable Energy").slideDown(1000).delay(1000);
-        $(this).slideUp(800, function() {
-        	$(this).text("It's Time to Start").slideDown(1000).delay(2500);
-          	$(this).slideUp(1200, function() {
-            $(this).text("Do you live in a good solar area?").slideDown(800);
-          });
-
-        });
+      	$(this).text("Do you live in a good solar area?").slideDown(800);
       });
+    });
   });
 }
 

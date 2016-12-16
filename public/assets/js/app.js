@@ -4,7 +4,7 @@ $(document).ready(function() {
   reset_button();
   scroll_banner_button();
   currentYear();
-  setTimeout(function() { slide_front_text(); }, 2000);
+  setTimeout(function() { slide_front_text(); }, 1500);
   // if using city search bar
   $("form").on("submit", function() {
     event.preventDefault();
