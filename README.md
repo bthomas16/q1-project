@@ -16,3 +16,19 @@ Solar Spot is designed to show you the solar power potential of a selected locat
 5. Solar Power Production Based on an Average System
 6. Shows when Energy Needs are Met by Average System
 7. Financial Incentives to Adopt Solar Power
+
+### Technologies Used
+1. HTML5
+2. CSS3
+3. JavaScript
+4. jQuery
+5. API's
+6. AJAX
+7. Materialize CSS Framework
+
+### API's Used
+1. National Resource Energy Laboratory (NREL) PVWatts V5 API
+2. National Resource Energy Laboratory (NREL) Solar Resource API
+3. National Resource Energy Laboratory (NREL) Energy Incentives (Version 2)
+4. National Resource Energy Laboratory (NREL) Utilities Rates
+5. Google Maps Geocoding API
