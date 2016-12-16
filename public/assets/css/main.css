@@ -169,6 +169,10 @@ body {
     color: black;
   }
 
+  .button_city > a.btn:hover {
+    background-color: #FFE29F;
+  }
+
 
   #location:focus {
     border-bottom: 1px solid #E8D99C;
@@ -189,6 +193,10 @@ body {
   .submit_btns_cust {
     background-color: #E8D99C;
     color: black;
+  }
+
+  .submit_btns_cust:hover {
+    background-color: #FFE29F;
   }
 
   .space_below {
@@ -218,7 +226,7 @@ body {
   }
 
   .prod_btn:hover {
-    background-color: #F6E75F;
+    background-color: #FFE29F;
   }
 
 
