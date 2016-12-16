@@ -27,8 +27,8 @@ Solar Spot is designed to show you the solar power potential of a selected locat
 7. Materialize CSS Framework
 
 ### API's Used
-1. National Resource Energy Laboratory (NREL) PVWatts V5 API
-2. National Resource Energy Laboratory (NREL) Solar Resource API
-3. National Resource Energy Laboratory (NREL) Energy Incentives (Version 2)
-4. National Resource Energy Laboratory (NREL) Utilities Rates
+1. National Renewable Energy Laboratory (NREL) PVWatts V5 API
+2. National Renewable Energy Laboratory (NREL) Solar Resource API
+3. National Renewable Energy Laboratory (NREL) Energy Incentives (Version 2)
+4. National Renewable Energy Laboratory (NREL) Utilities Rates
 5. Google Maps Geocoding API
